@@ -4,7 +4,6 @@ layout: page
 ---
 
 # What is the Medical Device Club @ Vanderbilt?
-
 We are a like-minded group of computer scientists, engineers, and clinicians that 
 want to innovate healthcare through technology. We provide:
 
