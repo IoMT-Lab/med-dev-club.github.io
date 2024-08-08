@@ -1,9 +1,8 @@
 ---
 layout: page
-
 ---
 
-# What is the Medical Device Club @ Vanderbilt?
+## What is the Medical Device Club @ Vanderbilt?
 We are a like-minded group of computer scientists, engineers, and clinicians that 
 want to innovate healthcare through technology. We provide:
 
@@ -15,10 +14,10 @@ want to innovate healthcare through technology. We provide:
 Also, the Medical Device Club aims to complement/support the Vanderbilt Institute 
 for Surgery and Engineering by providing a weekly opportunity to innovate and discuss technical challenges.
 
-# Should I get involved in the Medical Device Club?
+## Should I get involved in the Medical Device Club?
 We HIGHLY encourage __senior design teams__, __graduate researchers__, and __anyone working on medical technology projects__
 to join the club and take advantage/participate in the community — we are a diverse 
 group with experts spanning multiple engineering and medical disciplines. 
 We like to think of the club as a teaching hospital for medical devices.
 
-# Get Involved with the Medical Device Club!
+## Get Involved with the Medical Device Club!
