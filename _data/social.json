@@ -2,12 +2,11 @@
   {
     "name": "Github",
     "link": "https://github.com/IoMT-Lab",
-    "image": "images/social/github.svg"
+    "image": "assets/icons/social/github.svg"
   },
   {
-      "name": "Email",
-      "link": "mailto:iomt@vanderbilt.edu ",
-      "image": "images/social/email.svg"
+    "name": "Email",
+    "link": "mailto:iomt@vanderbilt.edu ",
+    "image": "assets/icons/social/email.svg"
   }
-
 ]

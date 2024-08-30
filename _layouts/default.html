@@ -3,16 +3,20 @@
 
 <head>
   <meta charset="utf-8">
-  <title>{% if page.title %}{{page.title}}{% else %}{{ site.title | escape }}{% endif %}</title>
+  <title>{% if page.title %}{{page.title}} | {{site.title}}{% else %}{{ site.title | escape }}{% endif %}</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="icon" type="image/png" href="{{ '/images/favicon.ico' | relative_url }}">
+  <link rel="icon" type="image/png" href="{{ '/assets/icons/favicon.ico' | relative_url }}">
+  <link rel="apple-touch-icon" sizes="180x180" href="{{ '/assets/icons/apple-touch-icon.png' | relative_url }}">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/icons/favicon-16x16.png">
   <!-- Google Fonts CDN -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
-  <!-- Self host font -->
-  <!-- <link rel="preload" href="{{ '/assets/fonts/playfair-display.woff2' | relative_url }}" as="font" type="font/woff2" crossorigin> -->
+  <link href="https://fonts.googleapis.com/css2?family=Antonio:wght@100..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Libre+Caslon+Display&display=swap" rel="stylesheet">
   <link href="{{ '/assets/css/style.css' | relative_url }}" rel="stylesheet">
+
+  <link rel="manifest" href="/site.webmanifest">
   
   {% if page.description %}<meta name="description" content="{{ page.description }}" />{% endif %}
   {% if page.meta_title %}<meta property="og:title" content="{{ page.meta_title }}"/>{% else %}<meta property="og:title" content="{{ page.title }}"/>{% endif %}
@@ -20,9 +24,6 @@
   <meta property="og:url" content="{{ url }}"/>
   {% if page.image %}<meta property="og:image" content="{{ page.image | absolute_url }}"/>{% endif %}
   {% if page.description %}<meta property="og:description" content="{{ page.description }}"/>{% endif %}
-  <meta name="twitter:card" content="summary"/>
-  {% if site.data.seo.meta_twitter_site %}<meta name="twitter:site" content="{{ site.seo.meta_twitter_site }}"/>{% endif %}
-  {% if site.data.seo.meta_twitter_creator %}<meta name="twitter:creator" content="{{ site.seo.meta_twitter_creator }}"/>{% endif %}
 
 </head>
 
@@ -30,7 +31,16 @@
   {% include main-menu-mobile.html %}
   <div id="wrapper" class="wrapper">
     {% include header.html headerClass='header-extra' %}
-    {{content}}
+    <div class="container pb-6 pt-6 pt-md-10 pb-md-10">
+      <div class="row justify-content-start">
+          <div class="col-12 col-md-8">
+              <div class="service service-single">
+                  <h1 class="title">{{page.title}}</h1>
+                  <div class="content">{{content}}</div>
+              </div>
+          </div>
+      </div>
+  </div>
   </div>
   {% include footer.html %}
   {% include sub-footer.html %}

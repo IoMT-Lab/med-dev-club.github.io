@@ -1,8 +1,7 @@
 ---
 title: About
-layout: page
+layout: default
 description: About
-bodyClass: page-about
 ---
 ## What is the Medical Device Club @ Vanderbilt?
 

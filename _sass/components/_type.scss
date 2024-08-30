@@ -1,44 +1,66 @@
-p {
-  line-height: 26px;
-  color: $steel;
-  font-family: $font-family-base;
+a {
+  text-decoration: underline;
+}
+img {
+  max-width: 100%;
+  height: auto;
+  margin-top: 20px;
   margin-bottom: 20px;
 }
-h1 {
-  font-size: 30px;
-  font-family: $font-family-heading;
-  line-height: 1.2;
-  margin-bottom: 20px;
-  @include media-breakpoint-up(md) {
-    font-size: 32px;
-    line-height: 1.2;
-  }
+strong {
+  font-style: bold;
 }
-h2 {
-  font-size: 24px;
-  font-family: $font-family-heading;
-  line-height: 1.4;
-  margin-bottom: 10px;
-  @include media-breakpoint-up(md) {
-    font-size: 26px;
-    line-height: 1.4;
-  }
+em {
+  font-style: italic;
 }
-h3 {
-  font-size: 16px;
-  line-height: 1.4;
-  display: inline;
-  @include media-breakpoint-up(md) {
-    font-size: 20px;
-    line-height: 1.4;
-  }
-}
+
+
 ul,
 ol {
-  margin: 0;
-  padding: 0;
-  li {
-    padding: 0;
-    margin: 0;
+  margin-bottom: 20px;
+  ul,
+  ol {
+    margin-bottom: 0;
   }
+}
+ul {
+  list-style: disc;
+}
+ol {
+  list-style: decimal;
+}
+li {
+  margin-bottom: 5px;
+  line-height: 1.56;
+  margin-left: 20px;
+  color: $vand_black;
+}
+hr {
+  border: none;
+  border-bottom: 1px solid $vand_white;
+}
+table {
+  width: 100%;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  th,
+  td {
+    padding: 5px;
+    vertical-align: top;
+    border-top: 1px solid $vand_white;
+  }
+  thead th {
+    vertical-align: bottom;
+    border-bottom: 1px solid $vand_white;
+    text-align: left;
+    font-weight: bold;
+  }
+  tbody + tbody {
+    border-top: 1px solid $vand_white;
+  }
+}
+blockquote {
+  padding: 0 1em;
+  color: $vand_white;
+  border-left: .25em solid $vand_subheader_font;
 }

@@ -1,30 +1,53 @@
 ---
 ---
 
-// Colors
-$primary: #e5261f;
-$primary-dark: #a01b16;
-$secondary: #f88379;
-$black: #2f2f41;
-$white: #ffffff;
-$white-offset: #fff6f8;
-$steel: #5c5a5a;
+@import "style/colors";
+@import "style/fonts";
+
+// Buttons
+$button-background-color: $vand_black;
+$button-color: $vand_black;
+$button-hover-color: $vand_white;
+$button-hover-background-color: lighten($button-background-color, 10%);
+
+// Header
+$header-color: $vand_white;
+$header-border-size: 2px;
+$header-border-color: $vand_sand;
 
 // Links
-$link-color: $primary;
+$link-color: $vand_black;
 $link-decoration: none;
-$link-hover-color: lighten($primary, 10%);
+$link-hover-color: lighten($vand_black, 10%);
 $link-hover-decoration: underline;
 
-// Fonts
-$font-family-base: Helvetica, Arial, sans-serif, -apple-system;
-$font-family-heading: "Playfair Display", serif, -apple-system;
-
 // Footer
-$footer-background-color: $primary;
-$footer-text-color: $white;
-$sub-footer-background-color: darken($primary, 10%);
-$sub-footer-text-color: $white;
+$footer-color: $vand_black;
+$footer-background-color: $vand_sand;
+$footer-title-color: $vand-black;
+$footer-title-font: $vand_subheader_font;
+$footer-title-weight: regular;
+
+$sub-footer-color: $vand_white;
+$sub-footer-background-color: $vand_sand;
+
+// Menu (Mobile & Desktop)
+$hamburger-background-color: $vand_black;
+$menu-background-color: $vand-black;
+$menu-font: $vand-subheader-font;
+$menu-font-color: $vand-black;
+$menu-font-weight: normal;
+$menu-decoration: none;
+$menu-hover-decoration: underline;
+$menu-active-font-color: $menu-font-color;
+$menu-active-font-weight: bold;
+$menu-active-decoration: none;
+$menu-active-hover-decoration: none;
+
+// Title
+$title-color: $vand-flat-gold;
+$title-font: $vand_header_font;
+$title-font-size: 48px;
 
 // Bootstrap 5.3.2
 
@@ -92,18 +115,11 @@ $sub-footer-text-color: $white;
 @import "components/main-menu-mobile";
 @import "components/hamburger";
 @import "components/buttons";
-@import "components/call";
 @import "components/title";
 @import "components/content";
-@import "components/intro";
-@import "components/intro-image";
-@import "components/strip";
-@import "components/feature";
 @import "components/social";
-// @import "components/fonts"; // Uncomment this line to self host font
 
 // Pages
-@import "pages/page-home";
 @import "pages/page-teams";
 @import "pages/page-project";
 

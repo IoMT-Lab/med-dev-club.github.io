@@ -2,31 +2,20 @@ baseurl: '/'
 permalink: pretty
 title: 'Medical Device Club'
 
+GOOGLE_ANALYTICS_ID: G-314DLWLHC2
+
 logo:
-  mobile: "images/logo/Vanderbilt_V.png"
+  mobile: "assets/vanderbilt/images/v/primary/Dimensional_V.png"
   mobile_height: "32px"
   mobile_width: "32px"
-  desktop: "images/logo/Vanderbilt_V.png"
-  desktop_height: "100px"
-  desktop_width: "100px"
+  desktop: "assets/vanderbilt/images/primary_lockup/Dimensional_V_Black_Lockup.png"
+  desktop_height: "54px"
+  desktop_width: "250px"
 
+collections_dir: collections
 collections:
-  projects:
-    output: false
-  team:
-    output: false
-
-defaults:
-  - scope:
-      path: ""
-      type: "projects"
-    values:
-      layout: "project"
-  - scope:
-      path: ""
-      type: "team"
-    values:
-      layout: "team"
+  - projects
+  - team
 
 sass:
   style: compressed # possible values: nested expanded compact compressed

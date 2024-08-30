@@ -13,19 +13,21 @@
       > a {
         padding: 10px 12px 10px 12px;
         display: inline-block;
-        font-weight: normal;
-        text-decoration: none;
-        color: $primary;
+        font-weight: $menu-font-weight;
+        text-decoration: $menu-decoration;
+        color: $menu-font-color;
+        font-family: $menu-font;
         &:hover {
-          text-decoration: underline;
+          text-decoration: $menu-decoration;
         }
       }
       &.active {
         > a {
-          font-weight: bold;
-          text-decoration: none;
+          color: $menu-active-font-color;
+          font-weight: $menu-active-font-weight;
+          text-decoration: $menu-active-decoration;
           &:hover {
-            text-decoration: none;
+            text-decoration: $menu-active-hover-decoration;
             transition: all 225ms ease-in 0s;
           }
         }

@@ -35,7 +35,7 @@
   }
 
   .team-summary-large {
-    background-color: $white-offset;
+    background-color: $vand_white;
     padding: 30px;
     border-radius: 3px;
     .team-image {
@@ -46,6 +46,7 @@
       overflow: hidden;
       img {
         width: 90px;
+        margin-top: 0px
       }
     }
   }

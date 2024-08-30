@@ -1,8 +1,6 @@
 .title {
-  color: $black;
-  font-size: 48px;
+  color: $title-color;
+  font-family: $title-font;
+  font-size: $title-font-size;
   line-height: 1.2;
-  @include media-breakpoint-up(lg) {
-    font-size: 50px;
-  }
 }
