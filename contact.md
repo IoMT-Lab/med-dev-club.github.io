@@ -7,6 +7,6 @@ bodyClass: page-about
 
 ## Get Involved with the Medical Device Club!
 
-__What:__ Medical Device Club @ Vanderbilt! \
-__Who:__ Signup to be a [member](https://redcap.vumc.org/surveys/?s=WRFNCANTMD7NDR4R) and start developing! \
-__When and Where:__ Meeting time will be announced soon
+Interested in becoming a member? [Sign up](https://redcap.vumc.org/surveys/?s=WRFNCANTMD7NDR4R) now and start developing!
+
+Have an idea for a medical device project you would like help pursuing? [Submit your idea](https://redcap.vumc.org/surveys/?s=XALNRHPT79NJ4KAE) today and see what we can do for you!

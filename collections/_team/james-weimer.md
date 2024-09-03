@@ -8,4 +8,4 @@ promoted: true
 weight: 1
 ---
 
-Short description Jim
+Assistant Professor
