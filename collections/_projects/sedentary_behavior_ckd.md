@@ -1,8 +1,8 @@
 ---
 title: "Sedentary Behavior in Chronic Kidney Disease"
-team: []
+team: ["Taylor Carpenter"]
 advisors: ["Dr. Devika Nair"]
-status: "Completed"
+status: "In-progress"
 tags: ["Wearables", "Accelerometer"]
 ---
 

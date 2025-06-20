@@ -1,8 +1,7 @@
 ---
 name: "Taylor Carpenter"
-image: "/assets/people/taylor_carpenter.png"
+image: "/assets/people/taylor_carpenter.jpeg"
 jobtitle: "Director"
-linkedinurl: "https://www.linkedin.com/"
 personalurl: "https://carpen.tech"
 promoted: true
 weight: 1

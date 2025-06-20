@@ -27,7 +27,9 @@ bodyClass: "page-projects"
             {% if project.advisors == empty %}
             <span>  TBD</span>
             {% else %}
-            <span>  {{project.advisors}}</span>
+            {% for item in project.advisors %}
+              <li>{{item}}</li>
+            {% endfor %}
             {% endif %}
           </div>
           <div>
