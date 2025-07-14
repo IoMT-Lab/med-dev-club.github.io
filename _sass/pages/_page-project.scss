@@ -1,13 +1,29 @@
 .page-projects {
-  .content {
-    > p {
-      &:first-of-type {
-        font-size: 1.6rem;
-        line-height: 1.4;
-        margin-bottom: 40px;
-        font-weight: regular;
-        color: rgb(104, 104, 104);
-      }
+  .project-summary {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    border-bottom: 1px solid #ccc;
+  }
+
+  .project-content {
+    flex: 1;
+
+    h2 {
+      text-transform: uppercase;
+    }
+  }
+
+  .project-image {
+    height: 256px;
+    width: 256px;
+    border-radius: 25%;
+    overflow: hidden;
+    margin-right: 30px;
+
+    img {
+      width: 256px;
+      margin-top: 0px;
     }
   }
 }

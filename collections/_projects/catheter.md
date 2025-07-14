@@ -1,5 +1,6 @@
 ---
 title: "Catheter Modification Device for Targeted Medication Delivery"
+image: "/assets/projects/catheter.png"
 team: ["Chad Ice"]
 advisors: ["Chad Ice", "Dr. James Weimer"]
 status: "Starting"

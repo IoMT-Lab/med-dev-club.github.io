@@ -1,5 +1,6 @@
 ---
 title: "Arm-worn non-invasive sensor"
+image: "/assets/projects/pulse_patch.png"
 team: ["Chad Ice"]
 advisors: ["Chad Ice", "Dr. James Weimer"]
 status: "Starting"

@@ -2,23 +2,29 @@
 layout: default
 bodyClass: "page-projects"
 ---
-
-
-<div class="container">
+{{content}}
+<div class="container pt-6 pb-6">
   <div class="row">
     {% for project in site.projects %}
     <div class="col-12 mb-3">
       <div class="project project-summary">
+        {% if project.image %}
+          <div class="project-image">
+            <img width="256" height="256" alt="{{ project.name }}" class="img-fluid mb-2" src="{{ project.image | relative_url }}" />
+          </div>
+        {% endif %}
         <div class="project-content">
-          <h1 class="project-title">
+          <h2 class="project-title">
             {{project.title}}
-          </h1>
+          </h2>
           <div>
             <h3>Team:</h3>
             {% if project.team == empty %}
             <span>  TBD</span>
             {% else %}
-            <span>  {{project.team}}</span>
+            {% for item in project.team %}
+              <li>{{item}}</li>
+            {% endfor %}
             {% endif %}
 
           </div>
@@ -42,6 +48,7 @@ bodyClass: "page-projects"
         </div>
       </div>
     </div>
+    
     {% endfor %}
   </div>
 </div>
