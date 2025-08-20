@@ -1,10 +1,10 @@
 ---
 name: "Taylor Carpenter"
 image: "/assets/people/taylor_carpenter.jpeg"
-jobtitle: "Director"
+jobtitle: "Advisor"
 personalurl: "https://carpen.tech"
 promoted: true
-weight: 1
+weight: 3
 ---
 
 Lead System Engineer
