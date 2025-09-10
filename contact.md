@@ -13,6 +13,6 @@ Have an idea for a medical device project you would like help pursuing? [Submit 
 
 ## Come See Us
 
-Join us for our kick-off meeting at the Internet of Medical Things lab -- **Room 360**, third floor in the ESB building, 25th & Garland Ave -- at **3pm on Wednesday, September 9th**.
+Join us for our kick-off meeting at the Internet of Medical Things lab -- **Room 360**, third floor in the ESB building, 25th & Garland Ave -- at **3pm on Wednesday, September 10th**.
 
 Details of regularly scheduled meeting TBD.
