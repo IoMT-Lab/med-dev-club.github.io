@@ -13,6 +13,6 @@ Have an idea for a medical device project you would like help pursuing? [Submit 
 
 ## Come See Us
 
-Join us for our kick-off meeting at the Internet of Medical Things lab -- **Room 360**, third floor in the ESB building, 25th & Garland Ave -- at **3pm on Wednesday, September 10th**.
+Join us for Medical Device Club office hours on Wednesdays, 1:30 - 3:30pm, Featheringill Hall (FGH), Room 313.
 
-Details of regularly scheduled meeting TBD.
+![Room 313](/assets/vanderbilt/images/FGH%20313.jpeg)
