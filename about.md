@@ -15,7 +15,7 @@ want to innovate healthcare through technology. We provide:
 - foster inventive ways to evaluate the efficacy/risk early in the design process as fast and as cheaply as possible
 
 Also, the Medical Device Club aims to complement/support the Vanderbilt Institute
-for Surgery and Engineering by providing a biweekly opportunity to innovate and discuss technical challenges.
+for Surgery and Engineering by providing weekly office hours to innovate and discuss technical challenges.
 
 ## Should I get involved in the Medical Device Club?
 
