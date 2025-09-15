@@ -15,4 +15,6 @@ Have an idea for a medical device project you would like help pursuing? [Submit 
 
 Join us for Medical Device Club office hours on Wednesdays, 1:30 - 3:30pm, Featheringill Hall (FGH), Room 313.
 
-![Room 313](/assets/vanderbilt/images/FGH%20313.jpeg)
+<p align="center">
+<img src="/assets/vanderbilt/images/FGH%20313.jpeg"/img>
+</p>
