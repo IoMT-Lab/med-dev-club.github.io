@@ -1,7 +1,7 @@
 ---
 name: "Chad Ice"
 image: "/assets/people/chad_ice.jpeg"
-jobtitle: "Director"
+jobtitle: "Co-director"
 promoted: true
 weight: 2
 ---
