@@ -2,7 +2,7 @@
 title: "Arm-worn non-invasive sensor"
 image: "/assets/projects/pulse_patch.png"
 team: []
-advisors: ["Chad Ice", "Evan Kruger", "Taylor Carpenter"]
+advisors: ["Chad Ice", "Evan Krueger", "Taylor Carpenter"]
 status: "Recruiting"
 ---
 
