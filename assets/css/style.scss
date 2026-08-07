@@ -4,50 +4,25 @@
 @import "style/colors";
 @import "style/fonts";
 
-// Buttons
-$button-background-color: $vand_black;
-$button-color: $vand_black;
-$button-hover-color: $vand_white;
-$button-hover-background-color: lighten($button-background-color, 10%);
+// Derived theme tokens
+$ink: $vand-black;
+$ink-soft: rgba($vand-black, 0.72);
+$paper: $vand-white;
+$paper-soft: rgba($vand-white, 0.75);
+$gold: $vand-flat-gold;
+$gold-deep: $vand-metal-gold-end;
+$gold-light: $vand-metal-gold-start;
+$gold-gradient: linear-gradient(100deg, $gold-deep, $gold 45%, $gold-light);
+// Rich gold page background (metallic gold range, brand core palette)
+$page-gold: linear-gradient(180deg, $gold 0%, $gold-deep 100%);
 
-// Header
-$header-color: $vand_white;
-$header-border-size: 2px;
-$header-border-color: $vand_sand;
+// Black card surfaces on the gold page
+$card-bg: $ink;
+$card-line: rgba($vand-white, 0.14);
 
-// Links
-$link-color: $vand_black;
-$link-decoration: none;
-$link-hover-color: lighten($vand_black, 10%);
-$link-hover-decoration: underline;
-
-// Footer
-$footer-color: $vand_black;
-$footer-background-color: $vand_sand;
-$footer-title-color: $vand-black;
-$footer-title-font: $vand_subheader_font;
-$footer-title-weight: regular;
-
-$sub-footer-color: $vand_white;
-$sub-footer-background-color: $vand_sand;
-
-// Menu (Mobile & Desktop)
-$hamburger-background-color: $vand_sand;
-$menu-background-color: $vand-sand;
-$menu-font: $vand-subheader-font;
-$menu-font-color: $vand-black;
-$menu-font-weight: normal;
-$menu-decoration: none;
-$menu-hover-decoration: underline;
-$menu-active-font-color: $menu-font-color;
-$menu-active-font-weight: bold;
-$menu-active-decoration: none;
-$menu-active-hover-decoration: none;
-
-// Title
-$title-color: $vand-flat-gold;
-$title-font: $vand_header_font;
-$title-font-size: 48px;
+$radius-card: 16px;
+$shadow-card: 0 16px 36px rgba(28, 28, 28, 0.35);
+$transition-card: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
 
 // Bootstrap 5.3.2
 
@@ -73,29 +48,6 @@ $title-font-size: 48px;
 @import "bootstrap/grid";
 @import "bootstrap/tables";
 @import "bootstrap/forms";
-// @import "bootstrap/buttons";
-// @import "bootstrap/transitions";
-// @import "bootstrap/dropdown";
-// @import "bootstrap/button-group";
-// @import "bootstrap/nav";
-// @import "bootstrap/navbar";
-// @import "bootstrap/card";
-// @import "bootstrap/accordion";
-// @import "bootstrap/breadcrumb";
-// @import "bootstrap/pagination";
-// @import "bootstrap/badge";
-// @import "bootstrap/alert";
-// @import "bootstrap/progress";
-// @import "bootstrap/list-group";
-// @import "bootstrap/close";
-// @import "bootstrap/toasts";
-// @import "bootstrap/modal";
-// @import "bootstrap/tooltip";
-// @import "bootstrap/popover";
-// @import "bootstrap/carousel";
-// @import "bootstrap/spinners";
-// @import "bootstrap/offcanvas";
-// @import "bootstrap/placeholders";
 
 // 5. Include Bootstrap helpers and utilities
 @import "bootstrap/helpers";
@@ -120,15 +72,6 @@ $title-font-size: 48px;
 @import "components/social";
 
 // Pages
+@import "pages/home";
 @import "pages/page-teams";
 @import "pages/page-project";
-
-body {
-  font-size: 16px;
-  line-height: 1.2;
-  font-family: $font-family-base;
-  @include media-breakpoint-up(md) {
-    font-size: 16px;
-    line-height: 1.3;
-  }
-};

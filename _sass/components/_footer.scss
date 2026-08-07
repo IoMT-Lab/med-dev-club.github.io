@@ -1,30 +1,35 @@
 .footer {
-  color: $footer-color;
-  background: $footer-background-color;
-  padding-top: 15px;
+  background: $ink;
+  color: rgba($vand-white, 0.75);
+  padding: 48px 0 36px;
+  border-top: 3px solid $gold;
 
   .footer-inner {
     display: flex;
-    justify-content: space-between;
     flex-direction: column;
+    gap: 24px;
     align-items: flex-start;
 
     @include media-breakpoint-up(sm) {
-      justify-content: space-between;
       flex-direction: row;
+      justify-content: space-between;
       align-items: center;
     }
   }
 
   .footer-title {
-    color: $footer-title-color;
-    font-size: 1.3rem;
-    font-family: $footer-title-font;
-    font-weight: $footer-title-weight;
-    margin-bottom: 10px;
+    font-family: $vand-header-font;
+    font-size: 26px;
+    font-weight: 400;
+    color: $vand-white;
+    margin: 0 0 6px;
+  }
 
-    @include media-breakpoint-up(sm) {
-      margin: 0;
-    }
+  .footer-tagline {
+    font-family: $vand-emphasis-font;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    color: $gold;
   }
 }

@@ -1,5 +1,5 @@
 ---
-title: "Arm-worn non-invasive sensor"
+title: "Arm-worn Non-invasive Sensor"
 image: "/assets/projects/pulse_patch.png"
 team: []
 advisors: ["Chad Ice", "Evan Krueger", "Taylor Carpenter"]

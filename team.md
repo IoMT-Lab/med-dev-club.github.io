@@ -5,6 +5,6 @@ description: Team
 permalink: "/team/"
 ---
 
-## Meet our team of faculty, staff, and students:
+## Meet our team of faculty and staff!
 
 

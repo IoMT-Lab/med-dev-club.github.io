@@ -1,23 +1,31 @@
 .hamburger {
   padding: 10px 0 10px 10px;
   outline: none;
-  z-index: 30;
+  z-index: 60;
+  position: relative;
   cursor: pointer;
+  border: none;
+  background: transparent;
+
   @include media-breakpoint-up(md) {
     display: none;
   }
+
   &:focus {
     outline: none;
   }
+
   .hamburger-inner,
   .hamburger-inner::before,
   .hamburger-inner::after {
-    background: $hamburger-background-color
+    background: $paper;
   }
+
   .hamburger-inner::after {
     width: 18px;
     right: 0;
   }
+
   &.is-active {
     .hamburger-inner::after {
       width: inherit;

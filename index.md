@@ -1,6 +1,7 @@
 ---
 title: Medical Device Club @ Vanderbilt
-layout: default
+layout: home
+description: The Medical Device Club at Vanderbilt University, part of the Internet of Medical Things (IoMT) lab.
 ---
 
 Welcome to the Medical Device Club at Vanderbilt University, part of the Internet of Medical Things (IoMT) lab.

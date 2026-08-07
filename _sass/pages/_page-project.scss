@@ -1,34 +1,134 @@
-.page-projects {
-  .project-summary {
+// Project cards (Projects page and home page strip) — black cards on gold
+.projects-grid {
+  padding: 36px 0 64px;
+
+  @include media-breakpoint-up(md) {
+    padding: 48px 0 88px;
+  }
+}
+
+.project-card {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+  height: 100%;
+  background: $card-bg;
+  border: 1px solid $card-line;
+  border-radius: $radius-card;
+  padding: 26px;
+  transition: $transition-card;
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: $shadow-card;
+    border-color: rgba($gold, 0.55);
+  }
+
+  .project-card-top {
     display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    border-bottom: 1px solid #ccc;
+    align-items: center;
+    gap: 18px;
   }
 
-  .project-content {
-    flex: 1;
-
-    h2 {
-      text-transform: uppercase;
-    }
-
-    .project-status {
-      text-transform: uppercase;
-      color: $vand-highlight;
-    }
-  }
-
-  .project-image {
-    height: 256px;
-    width: 256px;
-    border-radius: 25%;
+  .project-thumb {
+    flex: 0 0 auto;
+    width: 84px;
+    height: 84px;
+    border-radius: 22px;
+    background: $vand-white;
     overflow: hidden;
-    margin-right: 30px;
 
     img {
-      width: 256px;
-      margin-top: 0px;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      margin: 0;
     }
+  }
+
+  .project-title {
+    font-family: $vand-header-font;
+    font-size: 21px;
+    font-weight: 400;
+    line-height: 1.3;
+    margin: 0 0 8px;
+    color: $paper;
+  }
+
+  .project-desc {
+    margin: 0;
+    font-size: 15.5px;
+    line-height: 1.65;
+    color: $paper-soft;
+  }
+
+  .project-meta {
+    margin-top: auto;
+    padding-top: 16px;
+    border-top: 1px solid rgba($vand-white, 0.12);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .meta-row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 6px 8px;
+  }
+
+  .meta-label {
+    font-family: $vand-emphasis-font;
+    font-size: 12px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.16em;
+    color: $gold;
+    min-width: 74px;
+  }
+
+  .chip {
+    display: inline-block;
+    padding: 3px 12px;
+    border-radius: 999px;
+    background: rgba($vand-white, 0.06);
+    border: 1px solid rgba($vand-white, 0.22);
+    font-size: 13px;
+    color: $paper;
+  }
+
+  .chip-empty {
+    background: transparent;
+    border-style: dashed;
+    border-color: rgba($vand-white, 0.3);
+    color: rgba($vand-white, 0.55);
+  }
+}
+
+// Status pills (on black cards)
+.status-badge {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.09em;
+  background: rgba($vand-white, 0.08);
+  color: rgba($vand-white, 0.7);
+  border: 1px solid rgba($vand-white, 0.25);
+
+  &.status-recruiting {
+    background: rgba($gold, 0.14);
+    color: $gold;
+    border-color: rgba($gold, 0.6);
+  }
+
+  &.status-in-progress {
+    background: rgba($vand-white, 0.1);
+    color: $paper;
+    border-color: rgba($vand-white, 0.45);
   }
 }

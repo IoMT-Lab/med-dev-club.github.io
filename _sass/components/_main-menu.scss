@@ -1,35 +1,59 @@
 .main-menu {
   display: none;
+
   @include media-breakpoint-up(md) {
     display: block;
   }
+
   > ul {
     display: flex;
     align-items: center;
-    justify-content: flex-start;
+    gap: 4px;
+    margin: 0;
+    padding: 0;
+
     > li {
       list-style: none;
-      font-size: 1rem;
+      margin: 0;
+
       > a {
-        padding: 10px 12px 10px 12px;
         display: inline-block;
-        font-weight: $menu-font-weight;
-        text-decoration: $menu-decoration;
-        color: $menu-font-color;
-        font-family: $menu-font;
+        padding: 10px 14px;
+        font-family: $vand-header-font;
+        font-size: 17px;
+        font-weight: 400;
+        color: $paper-soft;
+        text-decoration: none;
+        position: relative;
+
+        // Gold underline indicator
+        &::after {
+          content: "";
+          position: absolute;
+          left: 14px;
+          right: 14px;
+          bottom: 4px;
+          height: 2px;
+          background: $gold;
+          transform: scaleX(0);
+          transform-origin: left;
+          transition: transform 0.2s ease;
+        }
+
         &:hover {
-          text-decoration: $menu-decoration;
+          color: $paper;
+
+          &::after {
+            transform: scaleX(1);
+          }
         }
       }
-      &.active {
-        > a {
-          color: $menu-active-font-color;
-          font-weight: $menu-active-font-weight;
-          text-decoration: $menu-active-decoration;
-          &:hover {
-            text-decoration: $menu-active-hover-decoration;
-            transition: all 225ms ease-in 0s;
-          }
+
+      &.active > a {
+        color: $paper;
+
+        &::after {
+          transform: scaleX(1);
         }
       }
     }

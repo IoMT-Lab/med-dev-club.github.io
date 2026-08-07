@@ -1,12 +1,21 @@
-<div class="footer">
+<footer class="footer">
   <div class="container">
     <div class="row">
       <div class="col-12">
         <div class="footer-inner">
-          <h2 class="footer-title">{{site.title}}</h2>
-          <span>All projects subject to <a href="https://cttc.co/inventors/policies">Vanderbilt University IP policy</a></span>
+          <div>
+            <h2 class="footer-title">{{ site.title }}</h2>
+            <div class="footer-tagline">Vanderbilt University &middot; IoMT Lab</div>
+          </div>
+          {% if site.data.social %}
+          <div class="social">
+            {% for item in site.data.social %}
+              <a href="{{ item.link }}" target="_blank" rel="noreferrer"><img src="{{ item.image | relative_url }}" title="{{ item.name }}" alt="{{ item.name }}" /></a>
+            {% endfor %}
+          </div>
+          {% endif %}
         </div>
       </div>
     </div>
   </div>
-</div>
+</footer>

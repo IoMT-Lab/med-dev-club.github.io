@@ -1,52 +1,102 @@
-.page-teams {
-  .team-summary {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    .team-image {
-      height: 60px;
-      width: 60px;
-      margin-right: 10px;
+.team-grid {
+  padding: 36px 0 64px;
+
+  @include media-breakpoint-up(md) {
+    padding: 48px 0 88px;
+  }
+}
+
+.team-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  background: $card-bg;
+  border: 1px solid $card-line;
+  border-radius: $radius-card;
+  padding: 34px 24px 28px;
+  transition: $transition-card;
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: $shadow-card;
+    border-color: rgba($gold, 0.55);
+  }
+
+  .team-photo {
+    width: 116px;
+    height: 116px;
+    border-radius: 50%;
+    padding: 4px;
+    background: $gold-gradient;
+    margin-bottom: 18px;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
       border-radius: 50%;
-      overflow: hidden;
-      img {
-        width: 60px;
-      }
-    }
-    .team-meta {
-      flex: 1;
-      h2 {
-        margin: 0;
-        font-size: 22px;
-        font-weight: normal;
-      }
-      p {
-        color: $black;
-        text-transform: uppercase;
-        margin: 0;
-        font-size: 12px;
-        font-weight: 500;
-      }
-    }
-    .team-content {
-      margin-top: 20px;
-      flex: 1 0 100%;
+      margin: 0;
+      border: 3px solid $vand-black;
     }
   }
 
-  .team-summary-large {
-    background-color: $vand_white;
-    padding: 30px;
-    border-radius: 3px;
-    .team-image {
-      height: 90px;
-      width: 90px;
-      margin-right: 20px;
-      border-radius: 50%;
-      overflow: hidden;
-      img {
-        width: 90px;
-        margin-top: 0px
+  .team-name {
+    font-family: $vand-header-font;
+    font-size: 23px;
+    font-weight: 400;
+    margin: 0;
+    color: $paper;
+
+    a {
+      color: $paper;
+      text-decoration: none;
+
+      &:hover {
+        color: $gold;
+      }
+    }
+  }
+
+  .team-role {
+    font-family: $vand-emphasis-font;
+    font-size: 13px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    color: $gold;
+    margin: 8px 0 0;
+  }
+
+  .team-bio {
+    margin: 12px 0 0;
+    font-size: 14.5px;
+    color: $paper-soft;
+  }
+
+  .team-links {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 16px;
+
+    a {
+      display: inline-block;
+      padding: 6px 16px;
+      border-radius: 999px;
+      border: 1px solid rgba($vand-white, 0.3);
+      font-size: 13px;
+      font-weight: 500;
+      color: $paper-soft;
+      text-decoration: none;
+      transition: border-color 0.15s ease, color 0.15s ease, background 0.15s ease;
+
+      &:hover {
+        border-color: $gold;
+        color: $gold;
+        background: rgba($gold, 0.1);
       }
     }
   }

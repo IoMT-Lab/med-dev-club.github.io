@@ -1,25 +1,25 @@
 .header {
-  color: $header-color;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border-bottom: $header-border-size solid $header-border-color;
-  padding: 10px 0px;
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: rgba($vand-black, 0.92);
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba($vand-white, 0.12);
+
+  // Gold accent line across the very top of the page
+  &::before {
+    content: "";
+    display: block;
+    height: 3px;
+    background: $gold-gradient;
+  }
+
   .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-  }
-  &.header-absolute {
-    position: absolute;
-    z-index: 10;
-    width: 100%;
-  }
-}
-.lock-scroll {
-  .header {
-    &.header-absolute {
-      position: static;
-    }
+    padding-top: 12px;
+    padding-bottom: 12px;
   }
 }

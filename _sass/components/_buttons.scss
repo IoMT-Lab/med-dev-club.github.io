@@ -1,23 +1,73 @@
+// Default button: black, for use on gold surfaces
 .button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
   white-space: nowrap;
-  display: inline-block;
-  height: 40px;
-  line-height: 40px;
-  padding: 0 14px;
-  background: $button-background-color;
-  border-radius: 4px;
-  font-size: 14px;
-  font-weight: normal;
-  text-transform: uppercase;
-  letter-spacing: 0.025em;
-  color: $button-color;
+  height: 48px;
+  padding: 0 26px;
+  border-radius: 999px;
+  border: 1px solid transparent;
+  background: $ink;
+  color: $paper;
+  font-family: $vand-subheader-font;
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 0.01em;
   text-decoration: none;
-  -webkit-transition: all 0.15s ease;
-  transition: all 0.15s ease;
+  transition: all 0.18s ease;
+
   &:hover {
-    color: $button-hover-color;
-    background-color: $button-hover-background-color;
+    background: $vand-white;
+    color: $ink;
     transform: translateY(-1px);
+    box-shadow: 0 8px 20px rgba(28, 28, 28, 0.3);
     text-decoration: none;
+  }
+}
+
+// Compact variant for inline use (e.g. inside card meta rows)
+.button-small {
+  height: 30px;
+  padding: 0 16px;
+  font-size: 13px;
+}
+
+// Gold variant, for use on black surfaces (cards, hero)
+.button-gold {
+  background: $gold;
+  color: $ink;
+
+  &:hover {
+    background: $gold-light;
+    color: $ink;
+  }
+}
+
+// Outlined variant for gold surfaces
+.button-outline {
+  background: transparent;
+  border-color: rgba($vand-black, 0.55);
+  color: $ink;
+
+  &:hover {
+    background: $ink;
+    color: $paper;
+    box-shadow: none;
+  }
+}
+
+// Ghost variant for black surfaces (hero)
+.button-ghost {
+  background: transparent;
+  border-color: rgba($vand-white, 0.45);
+  color: $paper;
+
+  &:hover {
+    background: rgba($vand-white, 0.08);
+    border-color: $gold;
+    color: $gold-light;
+    box-shadow: none;
   }
 }

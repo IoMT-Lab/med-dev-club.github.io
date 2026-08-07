@@ -3,6 +3,8 @@ node_modules
 npm-debug.log
 
 # Jekyll
+vendor/
+.bundle/
 _site
 _site/
 .sass-cache/

@@ -3,13 +3,10 @@ layout: default
 bodyClass: "page-basic"
 ---
 
-<div class="container pb-6 pt-6 pt-md-10 pb-md-10">
-    <div class="row justify-content-start">
-        <div class="col-12 col-md-8">
-            <div class="service service-single">
-                <h1 class="title">{{page.title}}</h1>
-                <div class="content">{{content}}</div>
-            </div>
-        </div>
-    </div>
-</div>
+{% include page-header.html heading=page.heading lede=page.lede %}
+
+<article class="page-article">
+  <div class="container">
+    <div class="content{% unless page.no_panel %} content-panel{% endunless %}">{{ content }}</div>
+  </div>
+</article>

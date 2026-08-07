@@ -1,6 +1,7 @@
 .title {
-  color: $title-color;
-  font-family: $title-font;
-  font-size: $title-font-size;
-  line-height: 1.2;
+  font-family: $vand-header-font;
+  font-size: clamp(34px, 5vw, 48px);
+  line-height: 1.15;
+  color: $ink;
+  margin-bottom: 24px;
 }

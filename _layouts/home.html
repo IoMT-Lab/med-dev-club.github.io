@@ -3,18 +3,60 @@ layout: default
 bodyClass: "page-home"
 ---
 
-<div class="intro">
+<section class="hero">
+  <img class="hero-mark" alt="" aria-hidden="true" src="{{ '/assets/vanderbilt/images/v/secondary/White_Pinstripe_V.png' | relative_url }}" />
   <div class="container">
-    <div class="row justify-content-start">
-      <div class="col-12 col-md-7 col-lg-6 order-2 order-md-1">
-        {{ content }}
+    <div class="row">
+      <div class="col-12 col-lg-9">
+        <div class="hero-eyebrow">Vanderbilt University &middot; IoMT Lab</div>
+        <h1 class="hero-title">Medical Device Club <em>@&nbsp;Vanderbilt</em></h1>
+        <div class="hero-lede">{{ content }}</div>
+        <div class="hero-actions">
+          <a class="button button-gold" href="{{ '/projects/' | relative_url }}">Explore our projects</a>
+          <a class="button button-ghost" href="{{ '/contact/' | relative_url }}">Get involved</a>
+        </div>
+        {% assign recruiting = site.projects | where: "status", "Recruiting" %}
+        <div class="hero-stats">
+          <div class="stat">
+            <div class="stat-number">{{ site.projects | size }}</div>
+            <div class="stat-label">Active projects</div>
+          </div>
+          <div class="stat">
+            <div class="stat-number">{{ recruiting | size }}</div>
+            <div class="stat-label">Recruiting now</div>
+          </div>
+        </div>
       </div>
-      <!-- {% if page.intro_image %}
-      <div class="col-12 col-md-5 col-lg-6 order-1 order-md-2 position-relative">
-        <img alt="{{ page.title }}" class="intro-image{% if page.intro_image_absolute %} intro-image-absolute{% endif %}{% if page.intro_image_hide_on_mobile %} intro-image-hide-mobile{% endif %}" src="{{ page.intro_image | relURL }}" />
-      </div>
-      {% endif %} -->
     </div>
   </div>
-</div>
+</section>
 
+<section class="home-projects">
+  <div class="container">
+    <div class="section-head">
+      <div>
+        <div class="eyebrow">Our work</div>
+        <h2>Current projects</h2>
+      </div>
+      <a class="section-link" href="{{ '/projects/' | relative_url }}">View all projects</a>
+    </div>
+    <div class="row">
+      {% for project in site.projects limit: 3 %}
+      <div class="col-12 col-md-6 col-lg-4 mb-3 d-flex">
+        {% include project-card.html project=project compact=true %}
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="home-cta">
+  <div class="container">
+    <h2>Get involved</h2>
+    <p>Interested in becoming a member? Have an idea for a medical device project you would like help pursuing?</p>
+    <div class="home-cta-actions">
+      <a class="button" href="{{ site.data.links.signup }}">Sign Up</a>
+      <a class="button button-outline" href="{{ site.data.links.submit_idea }}">Submit Your Idea</a>
+    </div>
+  </div>
+</section>

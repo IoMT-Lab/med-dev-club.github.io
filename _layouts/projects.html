@@ -2,54 +2,17 @@
 layout: default
 bodyClass: "page-projects"
 ---
-{{content}}
-<div class="container pt-6 pb-6">
-  <div class="row">
-    {% for project in site.projects %}
-    <div class="col-12 mb-3">
-      <div class="project project-summary">
-        {% if project.image %}
-          <div class="project-image">
-            <img width="256" height="256" alt="{{ project.name }}" class="img-fluid mb-2" src="{{ project.image | relative_url }}" />
-          </div>
-        {% endif %}
-        <div class="project-content">
-          <h2 class="project-title">
-            {{project.title}}
-          </h2>
-          <div>
-            <h3>Team:</h3>
-            {% if project.team == empty %}
-            <span>  TBD</span>
-            {% else %}
-            {% for item in project.team %}
-              <li>{{item}}</li>
-            {% endfor %}
-            {% endif %}
 
-          </div>
-          <div>
-            <h3>Advisors:</h3>
-            {% if project.advisors == empty %}
-            <span>  TBD</span>
-            {% else %}
-            {% for item in project.advisors %}
-              <li>{{item}}</li>
-            {% endfor %}
-            {% endif %}
-          </div>
-          <div>
-            <h3>Status:</h3><span class="project-status">  {{project.status}}</span>
-          </div>
-          <div>
-            <h3>Description:</h3>
-            <p>{{ project.excerpt | markdownify | strip_html }}</p>
-          </div>
-        </div>
+{% include page-header.html heading="Our Work" lede=content %}
+
+<section class="projects-grid">
+  <div class="container">
+    <div class="row">
+      {% for project in site.projects %}
+      <div class="col-12 col-lg-6 mb-3 d-flex">
+        {% include project-card.html project=project %}
       </div>
+      {% endfor %}
     </div>
-    
-    {% endfor %}
   </div>
-</div>
-
+</section>
