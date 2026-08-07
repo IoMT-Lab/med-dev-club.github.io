@@ -1,0 +1,8 @@
+{% assign lede = include.lede | default: "" | strip %}
+{% assign heading = include.heading | default: page.title %}
+<section class="page-header">
+  <div class="container">
+    <h1>{{ heading }}</h1>
+    {% if lede != "" %}<div class="page-header-lede">{{ lede }}</div>{% endif %}
+  </div>
+</section>

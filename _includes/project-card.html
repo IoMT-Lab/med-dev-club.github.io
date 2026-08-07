@@ -1,0 +1,37 @@
+{% assign project = include.project %}
+<div class="project-card">
+  <div class="project-card-top">
+    {% if project.image %}
+    <div class="project-thumb">
+      <img alt="{{ project.title }}" src="{{ project.image | relative_url }}" loading="lazy" />
+    </div>
+    {% endif %}
+    <div>
+      <h3 class="project-title">{{ project.title }}</h3>
+      <span class="status-badge status-{{ project.status | slugify }}">{{ project.status }}</span>
+    </div>
+  </div>
+  {% if include.compact %}
+  <p class="project-desc">{{ project.excerpt | markdownify | strip_html | truncate: 150 }}</p>
+  {% else %}
+  <p class="project-desc">{{ project.excerpt | markdownify | strip_html }}</p>
+  <div class="project-meta">
+    <div class="meta-row">
+      <span class="meta-label">Team</span>
+      {% if project.team == empty or project.team == nil %}
+      <a class="button button-gold button-small" href="{{ site.data.links.signup }}">Sign Up</a>
+      {% else %}
+      {% for item in project.team %}<span class="chip">{{ item }}</span>{% endfor %}
+      {% endif %}
+    </div>
+    <div class="meta-row">
+      <span class="meta-label">Advisors</span>
+      {% if project.advisors == empty or project.advisors == nil %}
+      <span class="chip chip-empty">TBD</span>
+      {% else %}
+      {% for item in project.advisors %}<span class="chip">{{ item }}</span>{% endfor %}
+      {% endif %}
+    </div>
+  </div>
+  {% endif %}
+</div>

@@ -1,0 +1,165 @@
+// Hero — black panel bleeding from the black header
+.hero {
+  position: relative;
+  overflow: hidden;
+  background: $ink;
+  color: $paper;
+  padding: 72px 0 64px;
+  border-bottom: 3px solid rgba($vand-black, 0.35);
+
+  @include media-breakpoint-up(md) {
+    padding: 110px 0 96px;
+  }
+
+  // Soft gold glow, upper right
+  &::before {
+    content: "";
+    position: absolute;
+    top: -220px;
+    right: -160px;
+    width: 640px;
+    height: 640px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba($gold, 0.22) 0%, rgba($gold, 0) 65%);
+    pointer-events: none;
+  }
+
+  .container {
+    position: relative;
+    z-index: 1;
+  }
+
+  .hero-mark {
+    position: absolute;
+    right: -30px;
+    bottom: -50px;
+    width: 300px;
+    opacity: 0.09;
+    margin: 0;
+    pointer-events: none;
+
+    @include media-breakpoint-up(lg) {
+      width: 420px;
+      right: 20px;
+    }
+  }
+
+  .hero-eyebrow {
+    font-family: $vand-emphasis-font;
+    font-size: 14px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.24em;
+    color: $gold;
+    margin-bottom: 20px;
+  }
+
+  .hero-title {
+    font-family: $vand-header-font;
+    font-size: clamp(42px, 7.5vw, 72px);
+    line-height: 1.04;
+    color: $paper;
+    margin: 0 0 24px;
+    max-width: 14em;
+
+    em {
+      font-style: normal;
+      color: $gold;
+    }
+  }
+
+  .hero-lede {
+    max-width: 580px;
+    font-size: 18px;
+    line-height: 1.7;
+    color: rgba($vand-white, 0.78);
+
+    p {
+      margin: 0 0 12px;
+    }
+
+    a {
+      color: $gold;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+
+      &:hover {
+        color: $gold-light;
+      }
+    }
+  }
+
+  .hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    margin-top: 34px;
+  }
+
+  .hero-stats {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 36px 56px;
+    margin-top: 56px;
+    padding-top: 30px;
+    border-top: 1px solid rgba($vand-white, 0.16);
+
+    .stat-number {
+      font-family: $vand-emphasis-font;
+      font-size: 42px;
+      font-weight: 600;
+      line-height: 1;
+      color: $gold;
+    }
+
+    .stat-label {
+      margin-top: 8px;
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      color: rgba($vand-white, 0.6);
+    }
+  }
+}
+
+// Featured projects strip — sits directly on the gold page
+.home-projects {
+  padding: 64px 0 72px;
+
+  @include media-breakpoint-up(md) {
+    padding: 88px 0 96px;
+  }
+}
+
+// Get-involved band — on gold, black text and buttons
+.home-cta {
+  border-top: 1px solid rgba($vand-black, 0.18);
+  padding: 64px 0 72px;
+  text-align: center;
+
+  @include media-breakpoint-up(md) {
+    padding: 88px 0 96px;
+  }
+
+  h2 {
+    font-family: $vand-header-font;
+    font-size: clamp(30px, 4.5vw, 42px);
+    margin: 0 0 14px;
+    color: $ink;
+  }
+
+  p {
+    max-width: 560px;
+    margin: 0 auto;
+    color: $ink-soft;
+    font-size: 17px;
+  }
+
+  .home-cta-actions {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 14px;
+    margin-top: 30px;
+  }
+}
