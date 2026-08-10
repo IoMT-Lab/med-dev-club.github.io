@@ -2,7 +2,7 @@
 title: "Finger Internal Prosthesis"
 image: "/assets/projects/prosthesis.png"
 team: []
-advisors: ["Dr. Justin Stehr", "Dr. Panambur Bhandari", "Chad Ice"]
+advisors: ["Justin Stehr", "Dr. Panambur Bhandari", "Chad Ice"]
 status: "Recruiting"
 ---
 
