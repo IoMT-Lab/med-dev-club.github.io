@@ -3,7 +3,7 @@ title: "Subcutaneous Pulse Oximetry"
 image: "/assets/projects/sub_pulse_ox.png"
 team: []
 advisors: ["Dr. Steve Gondek", "Chad Ice"]
-status: "Recruiting"
+status: "In-progress"
 ---
 
 In the emergency setting, pulse oximetry provides necessary information about patient hemodynamics.

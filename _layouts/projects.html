@@ -5,13 +5,34 @@ bodyClass: "page-projects"
 
 {% include page-header.html heading="Our Work" lede=content %}
 
+{% comment %}
+  Projects are grouped by status in this order: Recruiting, In Progress, Completed.
+  Any project with an unrecognized status is listed after those groups.
+  Status is compared via slugify so "In Progress" / "In-Progress" both match.
+{% endcomment %}
+{% assign status_order = "recruiting,in-progress,completed" | split: "," %}
+
 <section class="projects-grid">
   <div class="container">
     <div class="row">
+      {% for status in status_order %}
+        {% for project in site.projects %}
+          {% assign project_status = project.status | slugify %}
+          {% if project_status == status %}
+          <div class="col-12 col-lg-6 mb-3 d-flex">
+            {% include project-card.html project=project %}
+          </div>
+          {% endif %}
+        {% endfor %}
+      {% endfor %}
+
       {% for project in site.projects %}
-      <div class="col-12 col-lg-6 mb-3 d-flex">
-        {% include project-card.html project=project %}
-      </div>
+        {% assign project_status = project.status | slugify %}
+        {% unless status_order contains project_status %}
+        <div class="col-12 col-lg-6 mb-3 d-flex">
+          {% include project-card.html project=project %}
+        </div>
+        {% endunless %}
       {% endfor %}
     </div>
   </div>
