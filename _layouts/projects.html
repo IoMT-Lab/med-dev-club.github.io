@@ -8,14 +8,30 @@ bodyClass: "page-projects"
 {% comment %}
   Projects are grouped by status in this order: Recruiting, In Progress, Completed.
   Any project with an unrecognized status is listed after those groups.
-  Status is compared via slugify so "In Progress" / "In-Progress" both match.
+  Status is compared via slugify so "In-progress" / "In Progress" both match.
+  A labeled divider line is rendered before each group that has at least one project.
 {% endcomment %}
 {% assign status_order = "recruiting,in-progress,completed" | split: "," %}
+{% assign status_labels = "Recruiting,In Progress,Completed" | split: "," %}
 
 <section class="projects-grid">
   <div class="container">
     <div class="row">
       {% for status in status_order %}
+        {% assign group_count = 0 %}
+        {% for project in site.projects %}
+          {% assign project_status = project.status | slugify %}
+          {% if project_status == status %}
+            {% assign group_count = group_count | plus: 1 %}
+          {% endif %}
+        {% endfor %}
+
+        {% if group_count > 0 %}
+        <div class="col-12">
+          <div class="projects-divider">
+            <span class="projects-divider-label">{{ status_labels[forloop.index0] }}</span>
+          </div>
+        </div>
         {% for project in site.projects %}
           {% assign project_status = project.status | slugify %}
           {% if project_status == status %}
@@ -24,8 +40,23 @@ bodyClass: "page-projects"
           </div>
           {% endif %}
         {% endfor %}
+        {% endif %}
       {% endfor %}
 
+      {% assign other_count = 0 %}
+      {% for project in site.projects %}
+        {% assign project_status = project.status | slugify %}
+        {% unless status_order contains project_status %}
+          {% assign other_count = other_count | plus: 1 %}
+        {% endunless %}
+      {% endfor %}
+
+      {% if other_count > 0 %}
+      <div class="col-12">
+        <div class="projects-divider">
+          <span class="projects-divider-label">Other</span>
+        </div>
+      </div>
       {% for project in site.projects %}
         {% assign project_status = project.status | slugify %}
         {% unless status_order contains project_status %}
@@ -34,6 +65,7 @@ bodyClass: "page-projects"
         </div>
         {% endunless %}
       {% endfor %}
+      {% endif %}
     </div>
   </div>
 </section>

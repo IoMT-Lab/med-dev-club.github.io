@@ -132,3 +132,32 @@
     border-color: rgba($vand-white, 0.45);
   }
 }
+
+// Section dividers between status groups on the Projects page
+.projects-divider {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin: 8px 0 20px;
+
+  .projects-grid .row > .col-12:not(:first-child) & {
+    margin-top: 28px;
+  }
+
+  &::after {
+    content: "";
+    flex: 1 1 auto;
+    height: 1px;
+    background: rgba($ink, 0.28);
+  }
+
+  .projects-divider-label {
+    font-family: $vand-emphasis-font;
+    font-size: 13px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.22em;
+    color: $ink-soft;
+    white-space: nowrap;
+  }
+}
